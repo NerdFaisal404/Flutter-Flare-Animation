@@ -3,5 +3,5 @@
 A new Flutter application.
 
 ## Youtube Video
-https://img.youtube.com/vi/2-kkxWA8beE/0.jpg
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2-kkxWA8beE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+[![Demo](https://img.youtube.com/vi/2-kkxWA8beE/1.jpg)](https://www.youtube.com/watch?v=2-kkxWA8beE)
