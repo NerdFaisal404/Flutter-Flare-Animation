@@ -13,7 +13,8 @@ void main() => runApp(MaterialApp(
       backgroundColor: Colors.white,
       body: Center(
         child: Image(
-          image: NetworkImage('https://avatars1.githubusercontent.com/u/12240187?s=460&v=4'),
+          //image: NetworkImage('https://avatars1.githubusercontent.com/u/12240187?s=460&v=4'),
+       image: AssetImage('images/dummy.jpg'),
         ),
       ),
     ),
