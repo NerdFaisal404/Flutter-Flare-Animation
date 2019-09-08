@@ -1,60 +1,23 @@
 import 'package:flutter/material.dart';
-import "package:flare_flutter/flare_actor.dart";
+import 'package:gradient_app_bar/gradient_app_bar.dart';
 
-void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
+void main() => runApp(MaterialApp(
+  home: Center(
+    child: Scaffold(
+      appBar: GradientAppBar(
+        title: Text('iComplain'),
+        backgroundColorStart: Color(0xFF27AAD6),
+        backgroundColorEnd: Color(0xFF375CA7),
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
+      backgroundColor: Colors.white,
+      body: Center(
+        child: Image(
+          image: NetworkImage('https://avatars1.githubusercontent.com/u/12240187?s=460&v=4'),
+        ),
+      ),
+    ),
+  ),
+));
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-  final String title;
 
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  String _animationName = "rotate";
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Expanded(
-                  child: FlareActor(
-                    "assets/mountain.flr",
-                    alignment: Alignment.center,
-                    fit: BoxFit.contain,
-                    animation: _animationName,
-                  ))
-            ],
-          ),
-        ));
-  }
-}
